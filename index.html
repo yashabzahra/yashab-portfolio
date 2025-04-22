@@ -5,53 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yashab Zahra - Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Basic Reset */
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      box-sizing: border-box;
+    }
+
+    /* Body & General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f0f0f5;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background: #222;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
       color: white;
-      padding: 20px;
+      padding: 40px 0;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    /* Navigation Bar */
     nav {
-      background: #444;
-      padding: 10px;
+      background: #333;
+      padding: 15px 0;
       text-align: center;
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #00c6ff;
+    }
+
+    /* Section Styling */
     section {
-      padding: 40px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
     }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      list-style-type: none;
+    }
+
+    .card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
     footer {
       background: #222;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      margin-top: 60px;
     }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Add some animation for the landing page */
+    .landing-animation {
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <header class="landing-animation">
     <h1>Yashab Zahra</h1>
-    <p>Welcome to my personal portfolio website</p>
+    <p>Welcome to my creative portfolio!</p>
   </header>
 
   <nav>
@@ -61,24 +147,24 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home">
+  <section id="home" class="landing-animation">
     <div class="card">
       <h2>Home</h2>
-      <p>Hello! I'm Yashab Zahra. This is my personal website where I share who I am and what I do.</p>
+      <p>Hello! I'm Yashab Zahra. Welcome to my portfolio, where creativity meets professionalism. Explore the various services I offer and let's connect!</p>
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="landing-animation">
     <div class="card">
       <h2>About Me</h2>
-      <p>I am a passionate individual who loves learning and growing. I have interests in many areas including creativity, business, and tech.</p>
+      <p>I am passionate about growing both personally and professionally. I love exploring new challenges in business, tech, and creative fields. Let’s work together to bring your ideas to life!</p>
     </div>
   </section>
 
-  <section id="services">
+  <section id="services" class="landing-animation">
     <div class="card">
       <h2>Services</h2>
-      <p>I offer a variety of digital services to help businesses and individuals grow online. My services include:</p>
+      <p>Here are some of the digital services I offer:</p>
       <ul>
         <li>Email Writing</li>
         <li>Data Entry</li>
@@ -88,12 +174,12 @@
         <li>Facebook Campaigns & Ads</li>
         <li>Instagram Ads</li>
       </ul>
-      <p>You can reach out to me for quality and affordable services tailored to your needs.</p>
+      <p>Get in touch to discuss how I can assist in your business growth with tailored services.</p>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="card">
+  <section id="contact" class="landing-animation">
+    <div class="card contact-info">
       <h2>Contact Me</h2>
       <p>Email: yashabzahraali@gmail.com</p>
       <p>Instagram: @yashab_zahra</p>
@@ -104,5 +190,7 @@
   <footer>
     <p>&copy; 2025 Yashab Zahra. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
